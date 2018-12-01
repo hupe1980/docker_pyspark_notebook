@@ -1,0 +1,9 @@
+version: '3'
+services:
+  pyspark_notebook:
+    build: .
+    command: start.sh jupyter lab --NotebookApp.token='pyspark'
+    volumes:
+      - ./work:/home/jovyan/work
+    ports:
+      - '8888:8888'
